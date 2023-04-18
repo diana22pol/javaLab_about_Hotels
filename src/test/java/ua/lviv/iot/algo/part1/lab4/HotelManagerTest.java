@@ -1,13 +1,17 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HotelManagerTest {
-    private static final HotelManager manager = new HotelManager();
-    @BeforeClass
-    public static void setUp() {
+    private HotelManager manager;
+    @BeforeEach
+    public void setUp() {
+        manager = new HotelManager();
         manager.addHotel(new ResortHotel("Beach Resort", 300, 150, 4, 2, 1, 7));
         manager.addHotel(new ResortHotel("Grand Resort", 500, 200, 5, 3, 2, 10));
 
@@ -20,23 +24,27 @@ public class HotelManagerTest {
         manager.addHotel(new MountainHotel("Winter holidays", 488, 70, 5, true));
         manager.addHotel(new MountainHotel("Ice Crystal Ski Resort", 656, 14, 5, true));
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void testGetHotelList() {
-        assertEquals(9, manager.getHotelList().size());
+        Assertions.assertEquals(8, manager.getHotelList().size());
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void testAddHotel() {
         manager.addHotel(new ResortHotel("New Hotel", 100, 50, 3, 1, 1, 5));
-        assertEquals(9, manager.getHotelList().size());
+        Assertions.assertEquals(9, manager.getHotelList().size());
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void testFindHotelsWithTotalRoomsGreaterThan() {
-        assertEquals(7, manager.findHotelsWithTotalRoomsGreaterThan(50).size());
+        var result = manager.findHotelsWithTotalRoomsGreaterThan(50);
+        Assertions.assertEquals(6, result.size());
+
+        for (var hotel: result) {
+            assertTrue(hotel.getTotalRooms() > 50);
+        }
     }
     @Test
     public void testFindHotelsWithRatingGreaterThan() {
-        assertEquals(5, manager.findHotelsWithRatingGreaterThan(3).size());
+        Assertions.assertEquals(5, manager.findHotelsWithRatingGreaterThan(3).size());
     }
-
 }
 
