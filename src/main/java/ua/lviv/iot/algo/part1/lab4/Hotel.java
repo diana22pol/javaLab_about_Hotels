@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 
 import lombok.*;
 
@@ -15,6 +15,12 @@ public abstract class Hotel {
     private int availableRooms;
     private int rating;
 
+    public static final String HEADER = "name, totalRooms, availableRooms, rating";
+    public String toCSV() {return name + ", " + totalRooms + ","  + availableRooms + ", " + rating;}
+
+    public String getHeaders() {
+        return HEADER;
+    }
     public abstract String getLocation();
 
     public void bookRoom() {
@@ -36,6 +42,7 @@ public abstract class Hotel {
     public int getAvailableRoomsCount() {
         return availableRooms;
     }
+
 
 }
 

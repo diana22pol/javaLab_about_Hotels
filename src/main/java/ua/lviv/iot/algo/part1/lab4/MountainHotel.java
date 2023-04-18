@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 import lombok.*;
 
 @NoArgsConstructor
@@ -13,6 +13,13 @@ public class MountainHotel extends Hotel {
             super(name, totalRooms, availableRooms, rating);
             this.skiLodge = skiLodge;
         }
+
+    public  String getHeaders() {
+        return HEADER + ", skiLodge";
+    }
+    public String toCSV() {
+        return super.toCSV() + ", " + skiLodge;
+    }
 
     @Override
     public String getLocation() {
