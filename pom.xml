@@ -15,11 +15,9 @@
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.8.1</version>
+            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -29,7 +27,7 @@
         <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs</artifactId>
-            <version>4.4.2</version>
+            <version>4.7.3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -69,6 +67,11 @@
                         </reports>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.20.0</version>
             </plugin>
         </plugins>
     </reporting>
@@ -120,9 +123,11 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <configLocation>google_checks.xml</configLocation>
-                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.20.0</version>
             </plugin>
         </plugins>
     </build>
