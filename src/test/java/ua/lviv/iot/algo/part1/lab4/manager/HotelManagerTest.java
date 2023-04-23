@@ -1,8 +1,12 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.manager;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab4.models.BeachHotel;
+import ua.lviv.iot.algo.part1.lab4.models.Motel;
+import ua.lviv.iot.algo.part1.lab4.models.MountainHotel;
+import ua.lviv.iot.algo.part1.lab4.models.ResortHotel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
 import lombok.*;
 
@@ -28,13 +28,11 @@ public abstract class Hotel {
             availableRooms -= 1;
         }
     }
-
     public void releaseRoom() {
         if (availableRooms < totalRooms) {
             availableRooms += 1;
         }
     }
-
     public int getBookedRoomsCount() {
         return  totalRooms - availableRooms;
     }

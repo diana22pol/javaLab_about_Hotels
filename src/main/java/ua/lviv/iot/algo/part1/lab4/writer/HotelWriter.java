@@ -1,4 +1,6 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.writer;
+
+import ua.lviv.iot.algo.part1.lab4.models.Hotel;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -13,7 +15,6 @@ public class HotelWriter {
         if (hotelList == null || hotelList.isEmpty()) {
             return null;
         }
-
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(defaultFileName))) {
             for (Hotel hotel_value : hotelList) {
                 bufferedWriter.write(hotel_value.getHeaders());
@@ -21,9 +22,11 @@ public class HotelWriter {
                 bufferedWriter.write(hotel_value.toCSV());
                 bufferedWriter.newLine();
             }
-            bufferedWriter.close();
-        } catch (IOException e) { }
 
+        } catch (IOException e) {
+            System.out.println("Error with writing to file.");
+            e.printStackTrace();
+        }
         return defaultFileName;
     }
     public void write() {}

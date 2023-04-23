@@ -1,5 +1,6 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 import lombok.*;
+import ua.lviv.iot.algo.part1.lab4.models.Hotel;
 
 @NoArgsConstructor
 @Setter
