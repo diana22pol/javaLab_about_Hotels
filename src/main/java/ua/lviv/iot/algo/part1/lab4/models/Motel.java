@@ -1,5 +1,6 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.models;
 import lombok.*;
+import ua.lviv.iot.algo.part1.lab4.models.Hotel;
 
 @NoArgsConstructor
 @Setter
@@ -16,6 +17,14 @@ public class Motel extends Hotel {
         this.trackNumberNearby = trackNumberNearby;
         this.trackKilometers = trackKilometers;
         this.citiesNodes = citiesNodes;
+    }
+
+    public  String getHeaders() {
+        return HEADER + ", trackNumberNearby, trackKilometers, citiesNodes";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + trackNumberNearby + ", " + trackKilometers + ", " + citiesNodes;
     }
 
     @Override

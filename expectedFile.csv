@@ -1,0 +1,16 @@
+name, totalRooms, availableRooms, rating, childPools, adultPools, restaurantsNumber
+Beach Resort, 300,150, 4, 1, 2, 7
+name, totalRooms, availableRooms, rating, childPools, adultPools, restaurantsNumber
+Grand Resort, 500,200, 5, 2, 3, 10
+name, totalRooms, availableRooms, rating, trackNumberNearby, trackKilometers, citiesNodes
+Highway Motel, 50,25, 3, M4, 280 km, Kyiv-Lviv
+name, totalRooms, availableRooms, rating, trackNumberNearby, trackKilometers, citiesNodes
+Country Motel, 30,15, 2, M7, 126 km, Vinnytsia-Odessa
+name, totalRooms, availableRooms, rating, beachFront
+Marriott, 150,62, 4, true
+name, totalRooms, availableRooms, rating, beachFront
+Hilton, 80,22, 3, false
+name, totalRooms, availableRooms, rating, skiLodge
+Winter holidays, 488,70, 5, true
+name, totalRooms, availableRooms, rating, skiLodge
+Ice Crystal Ski Resort, 656,14, 5, true

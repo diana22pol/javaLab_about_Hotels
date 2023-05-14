@@ -1,6 +1,7 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.manager;
 
 import lombok.Getter;
+import ua.lviv.iot.algo.part1.lab4.models.Hotel;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,5 +1,6 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.models;
 import lombok.*;
+import ua.lviv.iot.algo.part1.lab4.models.Hotel;
 
 @NoArgsConstructor
 @Setter
@@ -16,6 +17,13 @@ public class ResortHotel extends Hotel {
         this.adultPools = adultPools;
         this.childPools = childPools;
         this.restaurantsNumber = restaurantCount;
+    }
+
+    public  String getHeaders() {
+        return HEADER + ", childPools, adultPools, restaurantsNumber";
+    }
+    public String toCSV() {
+        return super.toCSV() + ", " + childPools + ", " + adultPools + ", " + restaurantsNumber;
     }
 
     @Override
